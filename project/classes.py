@@ -4,7 +4,7 @@ class Hero:
     
     def __init__(self, name, hero_class):
         self.name = name
-        
+        self.hero_class = hero_class
         self.inventory = []
 
     def add_to_inventory(self, item):
