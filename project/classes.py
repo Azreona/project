@@ -1,4 +1,5 @@
 import random
+import cast_spell from weapon_list
 
 class Hero:
     
@@ -32,11 +33,5 @@ class Wizard:
             "Melee": (5),
         }
 
-    def cast_spell(self, spell_name):
-        if spell_name in self.attacks:
-            if spell_name == "Fireball":
-                min_damage, max_damage = self.attacks[spell_name]
-                damage = random.randint(min_damage, max_damage)
-                if damage == max_damage:
-                    print(f"{self.name} casts {spell_name} for {damage} damage! CRITICAL HIT!")
+
 

@@ -26,15 +26,19 @@ def start_game():
     if hero_class == "Wizard":
         valid_inventory_choice = ["Staff", "Pixie Dust", "Magical Brass Knuckles"]
         while True: 
-            hero.add_to_inventory = input(f"Which of the following items would you like to start with? ({', '.join(valid_inventory_choice)}): ").capitalize()
-            if hero.add_to_inventory in valid_inventory_choice:
-                return hero.add_to_inventory
-        
-        else:
-            print(f"You Greedy Mother blubber")
-
+            chosen_item = input(f"Which of the following items would you like to start with? ({', '.join(valid_inventory_choice)}): ").capitalize()
+            if chosen_item in valid_inventory_choice:
+                hero.add_to_inventory(chosen_item)
+                break
+            else:
+                print(f"You Greedy Mother blubber")
+    
     print(f"Welcome, {hero_name} the {hero_class}!")
-        
-# Start the game loop or first event
-enter_dungeon_level_1(Hero)
+    
+    enter_dungeon_level_1(hero)
+
+
+
+
+
 
